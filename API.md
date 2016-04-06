@@ -1,7 +1,7 @@
 # API
 
 ## createWorker
-This helper function should be called within your worker. It will return an instance of ReduxWorker, which provides the following methods for you to set up your web worker:
+This helper function should be called within your worker. It will return an instance of `ReduxWorker`, which provides the following methods for you to set up your web worker:
 
 - registerReducer(reducer)
 - registerTask(taskName, taskCallback)
@@ -66,13 +66,13 @@ render(
 
 ## dispatch
 The new dispatcher will have the following flow:
-	1. Post message to redux-worker
-	2. Redux-worker changes state of store using the reducer
-	3. Redux-worker post message back to main thread
-	4. Main thread update new state
+	1. Post a message to redux-worker
+	2. Redux-worker uses the reducer to change the state of the store  
+	3. Redux-worker posts a message back to main thread
+	4. Main thread updates the new state
 	5. All subscribed components are rendered
 
-You can now also dispatch a task to be executed in redux-worker outside the context of Redux. This could be useful for task such as encryption/decryption, rich text formatting, etc.
+You can now also dispatch a task to be executed in `redux-worker` outside the context of Redux: useful for tasks like encryption/decryption, rich text formatting, etc.
 
 Task Creator
 ```js

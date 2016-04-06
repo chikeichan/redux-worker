@@ -79,7 +79,7 @@ describe('applyWorker', () => {
 			expect(worker.postMessage).toHaveBeenCalledWith(action);
 		});
 
-		it('should return promise when dispatching a task', function() {
+		it('should return a promise when dispatching a task', function() {
 			const task = {
 				task: 'TASK',
 				data: 'DATA'
