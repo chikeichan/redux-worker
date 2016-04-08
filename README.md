@@ -4,8 +4,13 @@ Redux-Worker is a [middleware](http://redux.js.org/docs/advanced/Middleware.html
 
 It helps you build multi-threaded JavaScript applications by moving your reducer into a Web Worker. It also provides a simple [API](https://github.com/chikeichan/redux-worker/blob/master/API.md) for you to register tasks to be executed in the web worker outside of Redux.  
 
+Check out the demo:  
+![](http://g.recordit.co/dqxWhYDb1E.gif)
+*(Right) Performing synchronous calculations on a separate worker thread, without blocking the main thread.*  
+
+
 ## Documentation
-See [API](https://github.com/chikeichan/redux-worker/blob/master/API.md)
+See the [API docs](https://github.com/chikeichan/redux-worker/blob/master/API.md).
 
 ## Inspiration
 
@@ -29,7 +34,7 @@ It spawns just one Web Worker instance, so don't give it more credit than it des
 ## Demos
   - [Solver for N-Queens](http://chikeichan.github.io/redux-worker/demo/nqueen/index.html)
 
-To run the demo locally, cd into the demo directory, and then:
+To run a demo locally, cd into a folder in the demo directory, and then:
 ```bash
 npm i
 webpack-dev-server
