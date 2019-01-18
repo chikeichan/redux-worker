@@ -46,7 +46,7 @@ import { applyWorker } from 'redux-worker'
 // - webworker-loader for Web Pack (https://github.com/bjyoungblood/webworker-loader)
 // - webworkify for browerify (https://github.com/substack/webworkify)
 
-const worker = window.Worker ? new Worker('./dist/worker.bundle.js') || null;
+const worker = window.Worker ? new Worker('./dist/worker.bundle.js') : null;
 
 // Apply worker middleware
 const enhancerWithWorker = compose(
